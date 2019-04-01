@@ -54,22 +54,8 @@ zh-CN
 	var $region = null;
 	var $regionCode = null;
 	var $regionName = null;
-	var $dmaCode = null;
 	var $countryCode = null;
 	var $countryName = null;
-	/*
-	var $inEU = null;
-	var $euVATrate = false;
-	var $continentCode = null;
-	var $continentName = null;
-	var $latitude = null;
-	var $longitude = null;
-	var $locationAccuracyRadius = null;
-	var $timezone = null;
-	var $currencyCode = null;
-	var $currencySymbol = null;
-	var $currencyConverter = null;
-	*/
 
 	function __construct() {
 
@@ -99,22 +85,8 @@ zh-CN
 		$this->region = $data['geoplugin_region'];
 		$this->regionCode = $data['geoplugin_regionCode'];
 		$this->regionName = $data['geoplugin_regionName'];
-		$this->dmaCode = $data['geoplugin_dmaCode'];
 		$this->countryCode = $data['geoplugin_countryCode'];
 		$this->countryName = $data['geoplugin_countryName'];
-		/*
-		$this->inEU = $data['geoplugin_inEU'];
-		$this->euVATrate = $data['euVATrate'];
-		$this->continentCode = $data['geoplugin_continentCode'];
-		$this->continentName = $data['geoplugin_continentName'];
-		$this->latitude = $data['geoplugin_latitude'];
-		$this->longitude = $data['geoplugin_longitude'];
-		$this->locationAccuracyRadius = $data['geoplugin_locationAccuracyRadius'];
-		$this->timezone = $data['geoplugin_timezone'];
-		$this->currencyCode = $data['geoplugin_currencyCode'];
-		$this->currencySymbol = $data['geoplugin_currencySymbol'];
-		$this->currencyConverter = $data['geoplugin_currencyConverter'];
-		*/
 	}
 	
 	function fetch($host) {
