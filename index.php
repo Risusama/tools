@@ -67,5 +67,7 @@ This tool was created as a part of my PHP-training and also to simplify (and pos
 //Kinda obvious, but this prints your current country code on the page for you to see.
 echo "Country Code: {$geoplugin->countryCode} <br />";
 ?>
+<hr />
+<a href="https://www.geoplugin.com/geolocation/" target="_new">IP Geolocation</a> by <a href="https://www.geoplugin.com/" target="_new">geoPlugin</a>
 </body>
 </html>
