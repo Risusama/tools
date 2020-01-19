@@ -30,7 +30,6 @@ This tool was created as a part of my PHP-training and also to simplify (and pos
 <h2>Search from EET Europarts' catalog</h2>
 	<form method="post" action="search.php">  
 		Search for: <input type="text" name="eet" value="" autofocus>
-		<input type="hidden" name="geoloc" value="<?php echo $geoloc;?>">
 		<input type="hidden" name="service" value="eet">
 		<br><br>
 		<input type="submit" name="submit" value="Submit">  
