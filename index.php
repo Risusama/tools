@@ -21,10 +21,14 @@ Translations for the disclaimer. You are free to add translations for other lang
 Just keep them inside <pre></pre> tags and try to keep the format as nice as possible.
 */
 $ccFI = "<pre>Tämä sivusto (tools.debexel.eu) ja / tai sen muut verkkotunnukset eivät ole millään tavalla sidoksissa EET Europartsiin, eBayhin ja / tai niiden muihin toimijoihin.
-Työkalun tarkoitus on kehittää omaa PHP-osaamistani sekä yksinkertaistaa (mahdollisesti myös nopeuttaen hitaita yhteyksiä käytettäessä) hakujen tekemistä EET Europartsin sekä eBayn katalogista.</pre>";
+Tällä työkalulla on kaksi tarkoitusta:
+- Antaa minulle mahdollisuus kehittää omaa PHP-osaamistani
+- Yksinkertaistaa, ehkäpä jopa nopeuttaa (*Intensiivinen tuijotus hitaita mobiiliyhteyksiä kohti*) hakua EET Europartsin sekä eBayn katalogeista.</pre>";
 
 $ccEN = "<pre>This site (tools.debexel.eu) and / or its other domains are not affiliated in any way with EET Europarts, eBay, and / or their other businesses.
-This tool was created as a part of my PHP-training and also to simplify (and possibly speed up when on slow connections) searching from EET Europarts' and eBay's catalog.</pre>";
+This tool has two main purposes:
+- Give me a chance to develop my PHP-skills
+- Simplify, perhaps even speed-up (*Intense staring at slow mobile connections*) searching from EET Europarts' and eBay's catalogs.</pre>";
 ?>
 
 <h2>Search from EET Europarts' catalog</h2>
