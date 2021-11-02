@@ -11,15 +11,16 @@
 <div id="content1" class="content"><?php
 
 /*
-Translations for the disclaimer. You are free to add translations for other languages you feel the need for.
+Translations for the disclaimer. Feel free to add translations for other languages you feel the need for.
 Just keep them inside <pre></pre> tags and try to keep the format as nice as possible.
+Might actually have to make a dedicated file for translations later. We'll see.
 */
 
 $ccEN = "<h3 style='font-family:monospace'>The daily dose of legal stuff, I guess?</h3>
 <pre>This site (tools.debexel.eu/tools.sarre.eu) and/or its other domains are not affiliated in any way with EET Europarts, eBay, and/or their other businesses.
 This tool has two main purposes:
-- Give me a chance to develop my PHP-skills
-- Simplify, perhaps even speed-up (*Intense staring at slow mobile connections*) searching from EET Europarts' and eBay's catalogs.
+- Give me a chance to develop my PHP skills
+- Simplify, perhaps even speed-up searching from EET Europarts' and eBay's catalogs. (*Staring at slow mobile connections*) 
 
 </pre>
 <h3 style='font-family:monospace'>GOOD TO KNOW:</h3>
@@ -68,7 +69,7 @@ Check it out and make an informed decision. Have a good day! :)</pre>
 if(isset($_POST['submit'])) {
 	unset($_POST['submit']);
 	if ($_POST['service'] == "eet") {
-		//Hardcoded hyphens in place of plus signs. Also some sanity checking.
+		//Hardcoded hyphens in place of plus signs, however bad design that may be. Also some sanity checking.
 		$_POST['eet'] = str_replace('+', '-', htmlspecialchars($_POST['eet']));
 
 		?>
