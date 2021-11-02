@@ -43,7 +43,7 @@ This is done in the hopes that a barcode which has hyphen(s) would be correct ev
 Sorry for any inconvenience!</pre>";
 ?>
 <h3>Search from EET Europarts' catalog</h3>
-	<form method="post" action="search.php">
+	<form method="post" action="/">
 		Search for: <input type="text" name="eet" value="" autofocus required>
 		<input type="hidden" name="service" value="eet">
 		<br><br>
@@ -54,7 +54,7 @@ Sorry for any inconvenience!</pre>";
 <hr />
 <div id="content2" class="content hidden">
 <h3>Search from eBay's catalog</h3>
-	<form method="post" action="search.php">
+	<form method="post" action="/">
 		Search for: <input type="text" name="ebay" value="" required>
 		<input type="hidden" name="service" value="ebay">
 		<br><br>
@@ -79,12 +79,40 @@ Sorry for any inconvenience!</pre>";
 		}
 	//
 	*/
-	
+
 	//Just print the disclaimer in english.
 	echo $ccEN;
 	?>
 </div>
 <?php
+
+if(isset($_POST['submit'])) {
+	unset($_POST['submit']);
+	if ($_POST['service'] == "eet") {
+		//Hardcoded hyphens in place of plus signs. Also some sanity checking.
+		$_POST['eet'] = str_replace('+', '-', htmlspecialchars($_POST['eet']));
+
+		?>
+		<script type="text/javascript">
+			window.open('https://www.eetgroup.com/fi-fi/?term=<?php echo $_POST["eet"]; ?>', '_newtab');
+		</script>
+
+		<?
+	}
+		else
+	{
+		//Hardcoded hyphens and sanity checking..
+		$_POST['ebay'] = str_replace('+', '-', htmlspecialchars($_POST['ebay']));
+
+		?>
+		<script type="text/javascript">
+			window.open('https://www.ebay.com/sch/i.html?_nkw=<?php echo $_POST["ebay"]; ?>', '_newtab');
+		</script>
+
+		<?
+	};
+}
+
 /*
 //GeoLocation data will not be used until further notice. I don't want to deal with GDPR in any way just yet.
 //Kinda obvious, but this prints your current country code on the page for you to see.
