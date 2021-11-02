@@ -9,25 +9,11 @@
 <body>
 
 <div id="content1" class="content"><?php
-/*
-//GeoLocation data will not be used until further notice. I don't want to deal with GDPR in any way just yet.
-//Include geolocation class
-//require_once('geoplugin.class.php');
-$geoplugin = new geoPlugin();
-//IP Geolocation check
-$geoplugin->locate();
-$geoloc = "{$geoplugin->countryCode}";
-//
-*/
 
 /*
 Translations for the disclaimer. You are free to add translations for other languages you feel the need for.
 Just keep them inside <pre></pre> tags and try to keep the format as nice as possible.
 */
-$ccFI = "<pre>Tämä sivusto (tools.debexel.eu) ja / tai sen muut verkkotunnukset eivät ole millään tavalla sidoksissa EET Europartsiin, eBayhin ja / tai niiden muihin toimijoihin.
-Tällä työkalulla on kaksi tarkoitusta:
-- Antaa minulle mahdollisuus kehittää omaa PHP-osaamistani
-- Yksinkertaistaa, ehkäpä jopa nopeuttaa (*Intensiivinen tuijotus hitaita mobiiliyhteyksiä kohti*) hakua EET Europartsin sekä eBayn katalogeista.</pre>";
 
 $ccEN = "<h3 style='font-family:monospace'>The daily dose of legal stuff, I guess?</h3>
 <pre>This site (tools.debexel.eu/tools.sarre.eu) and/or its other domains are not affiliated in any way with EET Europarts, eBay, and/or their other businesses.
@@ -42,6 +28,13 @@ This is done in the hopes that a barcode which has hyphen(s) would be correct ev
 
 Sorry for any inconvenience!</pre>";
 ?>
+
+<noscript type="text/javascript">
+<pre>Please enable/allow JavaScript on this page, it is required for opening the search results.
+In case you're unsure if you should enable it, the source code for this page is available at https://github.com/DebexeL/tools.debexel.eu (Contributions are welcome!)
+Check it out and make an informed decision. Have a good day! :)</pre>
+</noscript>
+
 <h3>Search from EET Europarts' catalog</h3>
 	<form method="post" action="/">
 		Search for: <input type="text" name="eet" value="" autofocus required>
@@ -66,20 +59,6 @@ Sorry for any inconvenience!</pre>";
 	<div>
 		</br>
 	<?php
-	/*
-	//GeoLocation data will not be used until further notice. I don't want to deal with GDPR in any way just yet.
-	//If your country code is "FI", print the disclaimer in finnish. For anything else, print it in english.
-		if ($geoloc == "FI")
-		{
-			echo $ccFI;
-		}
-		else
-		{
-			echo $ccEN;
-		}
-	//
-	*/
-
 	//Just print the disclaimer in english.
 	echo $ccEN;
 	?>
@@ -113,14 +92,7 @@ if(isset($_POST['submit'])) {
 	};
 }
 
-/*
-//GeoLocation data will not be used until further notice. I don't want to deal with GDPR in any way just yet.
-//Kinda obvious, but this prints your current country code on the page for you to see.
-echo "Country Code: {$geoplugin->countryCode} <br />";
-//
-*/
 ?>
 <hr />
-<!-- <a href="https://www.geoplugin.com/geolocation/" target="_new">IP Geolocation</a> by <a href="https://www.geoplugin.com/" target="_new">geoPlugin</a> -->
 </body>
 </html>
