@@ -1,3 +1,24 @@
+<!--
+
+	Tools (tools.sarre.eu) / A simple tool with a simple look to make searches from some web shops.
+    Copyright (C) 2021  Christian Sarre
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+-->
+
+
 <!DOCTYPE HTML>  
 <html>
 	<head>
@@ -32,7 +53,7 @@ Sorry for any inconvenience!</pre>";
 
 <noscript type="text/javascript">
 <pre>Please enable/allow JavaScript on this page, it is required for opening the search results.
-In case you're unsure if you should enable it, the source code for this page is available at https://github.com/DebexeL/tools.debexel.eu (Contributions are welcome!)
+In case you're unsure if you should enable it, the source code for this page is available at https://github.com/DebexeL/tools (Contributions are welcome!)
 Check it out and make an informed decision. Have a good day! :)</pre>
 </noscript>
 
