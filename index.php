@@ -75,6 +75,7 @@ if(isset($_POST['submit'])) {
 		?>
 		<script type="text/javascript">
 			window.open('https://www.eetgroup.com/fi-fi/?term=<?php echo $_POST["eet"]; ?>', '_newtab');
+			window.location.href = window.location.href;
 		</script>
 
 		<?
@@ -87,6 +88,7 @@ if(isset($_POST['submit'])) {
 		?>
 		<script type="text/javascript">
 			window.open('https://www.ebay.com/sch/i.html?_nkw=<?php echo $_POST["ebay"]; ?>', '_newtab');
+			window.location.href = window.location.href;
 		</script>
 
 		<?
