@@ -20,7 +20,7 @@
 
 
 <!DOCTYPE HTML>  
-<html>
+<html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width">
 		<title>Catalog Search Tools</title>
@@ -65,7 +65,9 @@ Check it out and make an informed decision. Have a good day! :)</pre>
 
 <h3>Search from EET Europarts' catalog</h3>
 	<form method="post" action="/">
+		<label>
 		Search for: <input type="text" name="eet" value="" autofocus required>
+		</label>
 		<input type="hidden" name="service" value="eet">
 		<br><br>
 		<input type="submit" name="submit" value="Submit" tabindex="-1">
@@ -76,7 +78,9 @@ Check it out and make an informed decision. Have a good day! :)</pre>
 <div id="content2" class="content hidden">
 <h3>Search from eBay's catalog</h3>
 	<form method="post" action="/">
-		Search for: <input type="text" name="ebay" value="" required>
+		<label>
+			Search for: <input type="text" name="ebay" value="" required>
+		</label>
 		<input type="hidden" name="service" value="ebay">
 		<br><br>
 		<input type="submit" name="submit" value="Submit" tabindex="-1">
