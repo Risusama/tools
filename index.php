@@ -22,6 +22,7 @@
 <!DOCTYPE HTML>  
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width">
 		<title>Catalog Search Tools</title>
 		<style>
 		.error {color: #FF0000;}
@@ -38,22 +39,27 @@ Might actually have to make a dedicated file for translations later. We'll see.
 */
 
 $ccEN = "<h3 style='font-family:monospace'>The daily dose of legal stuff, I guess?</h3>
-<pre>This site (tools.debexel.eu/tools.sarre.eu) and/or its other domains are not affiliated in any way with EET Europarts, eBay, and/or their other businesses.
-This tool has two main purposes:
-- Give me a chance to develop my PHP skills
-- Simplify, perhaps even speed-up searching from EET Europarts' and eBay's catalogs. (*Staring at slow mobile connections*) 
+<pre>This site (tools.debexel.eu/tools.sarre.eu) 
+and/or its other domains 
+are not affiliated to EET Europarts, eBay, and/or their other businesses.
+
+Source code is located at
+https://github.com/DebexeL/tools
 
 </pre>
 <h3 style='font-family:monospace'>GOOD TO KNOW:</h3>
 <pre>Any plus (+) signs in input will be converted to hyphens (-).
-This is done in the hopes that a barcode which has hyphen(s) would be correct even with different barcode scanner settings.
+This is done in the hopes a barcode which has hyphen(s) would be correct even with varying barcode scanner settings.
 
 Sorry for any inconvenience!</pre>";
 ?>
 
 <noscript type="text/javascript">
 <pre>Please enable/allow JavaScript on this page, it is required for opening the search results.
-In case you're unsure if you should enable it, the source code for this page is available at https://github.com/DebexeL/tools (Contributions are welcome!)
+Unsure if you should enable it?
+There's a link in the bottom that leads to the repository for this page. 
+	(Contributions are welcome!)
+
 Check it out and make an informed decision. Have a good day! :)</pre>
 </noscript>
 
@@ -76,9 +82,10 @@ Check it out and make an informed decision. Have a good day! :)</pre>
 		<input type="submit" name="submit" value="Submit" tabindex="-1">
 	</form>
 </div>
+
 <div id="content3" class="content hidden"></div>
 	<hr />
-	<div>
+	<div id="ccEN" style="font-size:12px">
 		</br>
 	<?php
 	//Just print the disclaimer in english.
