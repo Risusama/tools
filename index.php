@@ -24,9 +24,15 @@
 	<head>
 		<meta name="viewport" content="width=device-width">
 		<title>Catalog Search Tools</title>
-		<style>
-		.error {color: #FF0000;}
-		</style>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="apple-mobile-web-app-title" content="Search Tools">
+		<meta name="application-name" content="Search Tools">
+		<meta name="msapplication-TileColor" content="#2d89ef">
+		<meta name="theme-color" content="#1a9def">
 	</head>
 <body>
 
@@ -48,8 +54,9 @@ https://github.com/DebexeL/tools
 
 </pre>
 <h3 style='font-family:monospace'>GOOD TO KNOW:</h3>
-<pre>Any plus (+) signs in input will be converted to hyphens (-).
-This is done in the hopes a barcode which has hyphen(s) would be correct even with varying barcode scanner settings.
+<pre>Some barcode scanners do not support international keyboard layout.
+Because of that, plus signs in input will be converted to hyphens.
+
 
 Sorry for any inconvenience!</pre>";
 ?>
