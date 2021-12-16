@@ -45,9 +45,8 @@ Might actually have to make a dedicated file for translations later. We'll see.
 */
 
 $ccEN = "<h3 style='font-family:monospace'>The daily dose of legal stuff, I guess?</h3>
-<pre>This site (tools.debexel.eu/tools.sarre.eu) 
-and/or its other domains 
-are not affiliated to EET Europarts, eBay, and/or their other businesses.
+<pre>This site (tools.debexel.eu/tools.sarre.eu) or its other domains 
+are not affiliated with / to the mentioned services.
 
 Source code is located at
 https://github.com/DebexeL/tools
@@ -70,7 +69,7 @@ There's a link in the bottom that leads to the repository for this page.
 Check it out and make an informed decision. Have a good day! :)</pre>
 </noscript>
 
-<h3>Search from EET Europarts' catalog</h3>
+<h3>Search from EET Europarts</h3>
 	<form method="post" action="/">
 		<label>
 		Search for: <input type="text" name="eet" value="" autofocus required>
@@ -81,9 +80,9 @@ Check it out and make an informed decision. Have a good day! :)</pre>
 	</form>
 </div>
 
-<hr />
+<!-- <hr /> -->
 <div id="content2" class="content hidden">
-<h3>Search from eBay's catalog</h3>
+<h3>Search from eBay</h3>
 	<form method="post" action="/">
 		<label>
 			Search for: <input type="text" name="ebay" value="" required>
@@ -94,9 +93,33 @@ Check it out and make an informed decision. Have a good day! :)</pre>
 	</form>
 </div>
 
-<div id="content3" class="content hidden"></div>
+<div id="content3" class="content hidden">
+<h3>Search from Amazon</h3>
+	<form method="post" action="/">
+		<label>
+			Search for: <input type="text" name="amazon" value="" required>
+		</label>
+		<input type="hidden" name="service" value="amazon">
+		<br><br>
+		<input type="submit" name="submit" value="Submit" tabindex="-1">
+	</form>
+</div>
+
+<div id="content4" class="content hidden">
+<h3>Search from Alibaba</h3>
+	<form method="post" action="/">
+		<label>
+			Search for: <input type="text" name="alibaba" value="" required>
+		</label>
+		<input type="hidden" name="service" value="alibaba">
+		<br><br>
+		<input type="submit" name="submit" value="Submit" tabindex="-1">
+	</form>
+</div>
+
+<div id="content5" class="content hidden"></div>
 	<hr />
-	<div id="ccEN" style="font-size:12px">
+	<div id="ccEN" style="font-size:11px">
 		</br>
 	<?php
 	//Just print the disclaimer in english.
@@ -107,26 +130,53 @@ Check it out and make an informed decision. Have a good day! :)</pre>
 
 if(isset($_POST['submit'])) {
 	unset($_POST['submit']);
-	if ($_POST['service'] == "eet") {
+	if ($_POST['service'] == "eet")
+	{
 		//Hardcoded hyphens in place of plus signs, however bad design that may be. Also some sanity checking.
 		$_POST['eet'] = str_replace('+', '-', htmlspecialchars($_POST['eet']));
 
 		?>
 		<script type="text/javascript">
-			window.open('https://www.eetgroup.com/fi-fi/?term=<?php echo $_POST["eet"]; ?>', '_newtab');
+			window.open('https://www.eetgroup.com/fi-fi/?term=<?php echo $_POST["eet"]; ?>', '_eet').focus();
 			window.location.href = window.location.href;
 		</script>
 
 		<?
 	}
-		else
+		elseif ($_POST['service'] == "ebay") 
 	{
 		//Hardcoded hyphens and sanity checking..
 		$_POST['ebay'] = str_replace('+', '-', htmlspecialchars($_POST['ebay']));
 
 		?>
 		<script type="text/javascript">
-			window.open('https://www.ebay.com/sch/i.html?_nkw=<?php echo $_POST["ebay"]; ?>', '_newtab');
+			window.open('https://www.ebay.com/sch/i.html?_nkw=<?php echo $_POST["ebay"]; ?>', '_ebay');
+			window.location.href = window.location.href;
+		</script>
+
+		<?
+	}
+		elseif ($_POST['service'] == "amazon")
+	{
+		//Hardcoded hyphens and sanity checking..
+		$_POST['amazon'] = str_replace('+', '-', htmlspecialchars($_POST['amazon']));
+
+		?>
+		<script type="text/javascript">
+			window.open('https://www.amazon.com/s?k=<?php echo $_POST["amazon"]; ?>', '_amazon');
+			window.location.href = window.location.href;
+		</script>
+
+		<?
+	}
+		elseif ($_POST['service'] == "alibaba")
+	{
+		//Hardcoded hyphens and sanity checking..
+		$_POST['alibaba'] = str_replace('+', '-', htmlspecialchars($_POST['alibaba']));
+
+		?>
+		<script type="text/javascript">
+			window.open('https://www.alibaba.com/trade/search?SearchText=<?php echo $_POST["alibaba"]; ?>', '_alibaba');
 			window.location.href = window.location.href;
 		</script>
 
