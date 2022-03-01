@@ -150,7 +150,7 @@ if(isset($_POST['submit'])) {
 
 		?>
 		<script type="text/javascript">
-			window.open('https://www.ebay.com/sch/i.html?_nkw=<?php echo $_POST["ebay"]; ?>', '_ebay');
+			window.open('https://www.ebay.com/sch/i.html?_nkw=<?php echo $_POST["ebay"]; ?>', '_ebay').focus();
 			window.location.href = window.location.href;
 		</script>
 
@@ -163,7 +163,7 @@ if(isset($_POST['submit'])) {
 
 		?>
 		<script type="text/javascript">
-			window.open('https://www.amazon.com/s?k=<?php echo $_POST["amazon"]; ?>', '_amazon');
+			window.open('https://www.amazon.com/s?k=<?php echo $_POST["amazon"]; ?>', '_amazon').focus();
 			window.location.href = window.location.href;
 		</script>
 
@@ -176,7 +176,7 @@ if(isset($_POST['submit'])) {
 
 		?>
 		<script type="text/javascript">
-			window.open('https://www.alibaba.com/trade/search?SearchText=<?php echo $_POST["alibaba"]; ?>', '_alibaba');
+			window.open('https://www.alibaba.com/trade/search?SearchText=<?php echo $_POST["alibaba"]; ?>', '_alibaba').focus();
 			window.location.href = window.location.href;
 		</script>
 
